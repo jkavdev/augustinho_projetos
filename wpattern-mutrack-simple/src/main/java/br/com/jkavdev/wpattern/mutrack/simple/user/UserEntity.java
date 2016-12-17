@@ -9,10 +9,8 @@ import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import br.com.jkavdev.wpattern.mutrack.simple.packagee.PackageeEntity;
 import br.com.jkavdev.wpattern.mutrack.simple.permission.PermissionEntity;
 import br.com.jkavdev.wpattern.mutrack.simple.utils.BaseEntity;
 
@@ -32,8 +30,8 @@ public class UserEntity extends BaseEntity<Long> {
 	@Column(name = "password", length = 128, nullable = false)
 	private String password;
 	
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "user")
-	private List<PackageeEntity> packagees;
+//	@OneToMany(fetch = FetchType.EAGER, mappedBy = "user")
+//	private List<PackageeEntity> packagees;
 	
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(
@@ -77,13 +75,13 @@ public class UserEntity extends BaseEntity<Long> {
 		this.password = password;
 	}
 
-	public List<PackageeEntity> getPackagees() {
-		return packagees;
-	}
-
-	public void setPackagees(List<PackageeEntity> packagees) {
-		this.packagees = packagees;
-	}
+	// public List<PackageeEntity> getPackagees() {
+	// return packagees;
+	// }
+	//
+	// public void setPackagees(List<PackageeEntity> packagees) {
+	// this.packagees = packagees;
+	// }
 
 	public List<PermissionEntity> getPermissions() {
 		return permissions;

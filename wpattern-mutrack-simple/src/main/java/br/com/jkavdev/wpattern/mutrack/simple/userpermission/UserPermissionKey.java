@@ -3,7 +3,7 @@ package br.com.jkavdev.wpattern.mutrack.simple.userpermission;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
-import br.com.jkavdev.wpattern.test.mutrack.simple.utils.BaseKey;
+import br.com.jkavdev.wpattern.mutrack.simple.utils.BaseKey;
 
 @Embeddable
 public class UserPermissionKey extends BaseKey {

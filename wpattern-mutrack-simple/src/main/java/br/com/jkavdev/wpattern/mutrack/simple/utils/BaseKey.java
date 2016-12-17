@@ -1,4 +1,4 @@
-package br.com.jkavdev.wpattern.test.mutrack.simple.utils;
+package br.com.jkavdev.wpattern.mutrack.simple.utils;
 
 import java.io.Serializable;
 
