@@ -17,7 +17,7 @@ angular.module('mutrack')
         function successCallback(response) {
           callback && callback(response.data);
         },
-        function errorCallback() {
+        function errorCallback(response) {
         });
     };
   })
