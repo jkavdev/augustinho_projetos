@@ -37,7 +37,9 @@
 				<tr ng-repeat="user in users">
 					<td>{{user.name}}</td>
 					<td>{{user.email}}</td>
-					<td></td>
+					<td>
+						<div ng-repeat="permission in user.permissions">{{permission.role | formatPermission}}</div>
+					</td>
 					<td></td>
 					<td></td>
 				</tr>
