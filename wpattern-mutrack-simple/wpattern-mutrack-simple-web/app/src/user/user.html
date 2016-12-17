@@ -40,8 +40,8 @@
 					<td>
 						<div ng-repeat="permission in user.permissions">{{permission.role | formatPermission}}</div>
 					</td>
-					<td></td>
-					<td></td>
+					<td><button ng-click="editUser(user)">Edit</button></td>
+					<td><button ng-click="deleteUser(user)">Delete</button></td>
 				</tr>
 			</tbody>
 		</table>

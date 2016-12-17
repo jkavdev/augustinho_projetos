@@ -16,6 +16,12 @@ angular.module('mutrack').controller(
 				$scope.user = {};
 			};
 			
+			$scope.deleteUser = function(user){
+				RestService.delete('http://localhost:8086/api/private/user', user, function(){
+					$scope.users.splice($scope.users.indexOf(user), 1);
+				});
+			};
+		
 			$scope.saveUser = function(user){
 				if(user.id){
 					
