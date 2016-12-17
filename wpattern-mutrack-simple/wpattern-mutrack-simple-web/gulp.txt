@@ -1,0 +1,11 @@
+Instalando o gulp globalmente
+    npm install gulp -g
+
+Instalando o gulp na aplicação
+    npm install gulp --save-dev
+
+Instalando o gulp-connection
+    npm install gulp-connect --save-dev
+
+Instalando o gulp-inject
+    npm install gulp-inject --save-dev
