@@ -2,8 +2,8 @@
 
 angular.module('mutrack')
 
-//HttpRequestService - apenas realizará requisição http
-//informando quatro parâmetros - url, o tipo de requisição, conteúdo se houver e método status retorno 
+	//HttpRequestService - apenas realizará requisição http
+	//informando quatro parâmetros - url, o tipo de requisição, conteúdo se houver e método status retorno 
   .service('HttpRequestService', function($http) {
     return function(url, method, data, callback) {
       var requestParams = {
@@ -21,6 +21,8 @@ angular.module('mutrack')
         });
     };
   })
+  
+  //RestService - Serviço que será usado, que depende de HttpRequestService
   .service('RestService', function(HttpRequestService) {
     var restFactory = {};
 
@@ -29,7 +31,7 @@ angular.module('mutrack')
     	HttpRequestService(url, 'GET', {}, callback);
     };
 
-    // Aadd a new data.
+    // Add a new data.
     restFactory.add = function(url, data, callback) {
     	HttpRequestService(url, 'POST', data, callback);
     };
