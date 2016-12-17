@@ -5,6 +5,18 @@
 
 var gulp = require('gulp');
 var connect = require('gulp-connect');
+var inject = require('gulp-inject');
+
+//Informamos que pagina que no qual tera os arquivos injetados
+//Informamos os arquivos que serao injetados, no caso js e css
+
+gulp.task('index', function () {
+  var target = gulp.src('app/index.html');
+
+  var source = gulp.src(['app/src/**/*.js', 'app/src/**/*.css'], {read: false});
+
+  return target.pipe(inject(source, {relative: true})).pipe(gulp.dest('app/'));
+});
 
 //Indicando pasta de conteudo do projeto 'app'
 //Qualquer alteração do codigo, sera realizado um refresh na pagina
@@ -45,6 +57,6 @@ gulp.task('watch', function () {
 });
 
 //Task do gulp rodar
-gulp.task('default', ['connect', 'watch']);
+gulp.task('default', ['connect', 'watch', 'index']);
 
 
