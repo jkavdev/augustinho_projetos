@@ -11,10 +11,6 @@
 	</head>
 	
 	<body>
-		<h2>Spring MVC</h2>
-		<h4>
-			<a href="hello/controller.html">Hello</a>
-			<a href="/contact.html">Contacts</a>
-		</h4>
+		<h2>${message}</h2>
 	</body>
 </html>
